@@ -1,0 +1,11 @@
+{
+  "name": "seven-simple-projects",
+  "version": "1.0.0",
+  "description": "Seven simple Vanilla Javascript projects for beginners.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ulises Himely",
+  "license": "ISC"
+}

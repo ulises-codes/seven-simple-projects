@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="calc-wrapper">
+        <div class="calc-header">
+          <span>Count By:</span>
+          <div class="pickers">
+            <label for="picker-value" class="picker-label">
+              <input
+                id="picker-value"
+                class="picker"
+                type="radio"
+                name="picker"
+                checked
+              />
+              <span>Value</span>
+            </label>
+            <label for="picker-quantity" class="picker-label">
+              <input
+                id="picker-quantity"
+                class="picker"
+                type="radio"
+                name="picker"
+              />
+              <span>Quantity</span>
+            </label>
+          </div>
+        </div>
+        <div class="error-space">
+          <div class="error-box"></div>
+        </div>
+        <div class="column-headings">
+          <div class="column-heading">
+            <span>Bills</span>
+          </div>
+          <div class="column-heading">
+            <span>Coins</span>
+          </div>
+        </div>
+        <hr />
+        <div class="calc-body">
+          <div class="column bills-column">
+            <div class="row bills-row">
+              <label for="bills-hundreds" class="label">
+                <span class="denomination">100</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="bills-hundreds"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="100"
+                  data-category="bills"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row bills-row">
+              <label for="bills-fifties" class="label">
+                <span class="denomination">50</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="bills-fifties"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="50"
+                  data-category="bills"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row bills-row">
+              <label for="bills-twenties" class="label">
+                <span class="denomination">20</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="bills-twenties"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="20"
+                  data-category="bills"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row bills-row">
+              <label for="bills-tens" class="label">
+                <span class="denomination">10</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="bills-tens"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="10"
+                  data-category="bills"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row bills-row">
+              <label for="bills-fives" class="label">
+                <span class="denomination">5</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="bills-fives"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="5"
+                  data-category="bills"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row bills-row">
+              <label for="bills-twos" class="label">
+                <span class="denomination">2</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="bills-twos"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="2"
+                  data-category="bills"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row bills-row">
+              <label for="bills-ones" class="label">
+                <span class="denomination">1</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="bills-ones"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="1"
+                  data-category="bills"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row subtotal-row">
+              <label for="bills-total" class="total-label">
+                <span>Subtotal:</span>
+                <input
+                  id="bills-total"
+                  type="number"
+                  class="subtotal-field total-field"
+                  tabindex="-1"
+                  readonly
+                />
+              </label>
+            </div>
+          </div>
+          <div class="column coins-column">
+            <div class="row coins-row">
+              <label for="coins-dollar" class="label">
+                <span class="denomination">1.00</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="coins-dollar"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="1"
+                  data-category="coins"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row coins-row">
+              <label for="coins-half-dollar" class="label">
+                <span class="denomination">0.50</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="coins-half-dollar"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="0.50"
+                  data-category="coins"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row coins-row">
+              <label for="coins-quarter" class="label">
+                <span class="denomination">0.25</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="coins-quarter"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="0.25"
+                  data-category="coins"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row coins-row">
+              <label for="coins-dime" class="label">
+                <span class="denomination">0.10</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="coins-dime"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="0.10"
+                  data-category="coins"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row coins-row">
+              <label for="coins-nickel" class="label">
+                <span class="denomination">0.05</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="coins-nickel"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="0.05"
+                  data-category="coins"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row coins-row"></div>
+            <div class="row coins-row">
+              <label for="coins-penny" class="label">
+                <span class="denomination">0.01</span>
+                <span class="denomination-x quantity-item">x</span>
+                <input
+                  id="coins-penny"
+                  pattern="^[0-9]+(\.[0-9]{1,2})?$"
+                  data-denomination="0.01"
+                  data-category="coins"
+                  inputmode="numeric"
+                  class="input"
+                />
+                <span class="= quantity-item">=</span>
+                <span class="quantity-total quantity-item">0</span>
+              </label>
+            </div>
+            <div class="row subtotal-row">
+              <label for="coins-total" class="total-label">
+                <span>Subtotal:</span>
+                <input
+                  id="coins-total"
+                  type="number"
+                  class="subtotal-field total-field"
+                  tabindex="-1"
+                  readonly
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="grand-total-wrapper">
+          <label for="grand-total" class="total-label">
+            <span>Grand Total:</span>
+            <input
+              id="grand-total"
+              type="number"
+              class="total-field"
+              tabindex="-1"
+              readonly
+            />
+          </label>
+        </div>
+        <div class="calc-footer">
+          <button id="reset" class="reset-button">Reset</button>
+        </div>
+      </div>
+    </div>
+    <script src="./logic.js"></script>
+  </body>
+</html>
