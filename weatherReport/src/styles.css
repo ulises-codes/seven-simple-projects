@@ -1,0 +1,115 @@
+:root {
+  --red: #f26463;
+  --orange: #ff640f;
+  --blue: #24748f;
+  --yellow: #f1dd6d;
+  --white: #fafafa;
+  --black: #2a2a2a;
+  --error: var(--red);
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--yellow);
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-family: sans-serif;
+}
+
+hr {
+  height: 1px;
+  width: 95%;
+  margin: 0 auto;
+  border: none;
+  background-color: var(--yellow);
+}
+
+h1 {
+  text-align: center;
+  color: var(--blue);
+}
+
+#root {
+  position: relative;
+  margin-top: 76px;
+}
+
+.seven-day-forecast {
+  overflow: hidden;
+  margin: auto;
+  width: 70vw;
+  display: flex;
+  background-color: var(--black);
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-day {
+  padding: 0 12px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.2fr 0.2fr 1fr 0.5fr;
+  gap: 16px;
+  height: 75px;
+  width: 100%;
+  /* border-radius: 8px; */
+}
+
+.date {
+  font-size: 1em;
+  text-align: center;
+  font-weight: normal;
+}
+
+.temperature-wrapper {
+  text-align: center;
+}
+
+.temperature::after {
+  content: '°';
+}
+
+.day-temp {
+  color: var(--orange);
+}
+
+.night-temp {
+  color: var(--blue);
+}
+
+.day-temp.active,
+.night-temp.active {
+  font-size: 1.5em;
+}
+
+.short-forecast-wrapper {
+  gap: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.short-forecast {
+  flex-grow: 1;
+  font-weight: lighter;
+}
+
+.weather-icon {
+  object-fit: contain;
+}
+
+.wind-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
