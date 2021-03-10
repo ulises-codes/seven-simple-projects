@@ -1,14 +1,13 @@
 :root {
-  --cart-width: 275px;
   --red: #f26463;
   --orange: #ff640f;
   --blue: #24748f;
   --yellow: #f1dd6d;
   --white: #fafafa;
   --black: #2a2a2a;
-  --error: var(--red);
   --surface: var(--blue);
   --text-on-surface: var(--white);
+  --shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
   font-size: 16px;
 }
@@ -31,7 +30,6 @@ body {
   position: relative;
   display: grid;
   grid-template: 100px 1fr / 1fr var(--cart-width);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: lighter;
 }
 
@@ -91,13 +89,15 @@ h1 {
 .theme-default {
   --background: var(--white);
   --text-color: var(--black);
-  --shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .theme-dark {
   --background: var(--black);
   --text-color: var(--white);
-  --shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header-inner {

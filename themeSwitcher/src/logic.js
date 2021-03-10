@@ -1,5 +1,4 @@
 const body = document.querySelector('body')
-const themeChooser = document.getElementById('theme-chooser')
 const themeEls = document.querySelectorAll('.theme-li')
 const profileButton = document.querySelector('.profile-button')
 const menu = document.querySelector('.menu')
@@ -10,7 +9,7 @@ function getTheme() {
   return localStorage.getItem('theme')
 }
 
-function setTheme(newTheme) {
+function setTheme(newTheme = 'default') {
   if (currentTheme === newTheme) return
 
   body.classList.value = `theme-${newTheme}`
@@ -31,14 +30,7 @@ function toggleActiveClass(el) {
   }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-  setTheme(getTheme())
-
-  // Add "active-theme" class to li element to highlight the current theme
-  themeEls.forEach(
-    el => el.dataset.theme === currentTheme && el.classList.add('active-theme')
-  )
-})
+window.addEventListener('DOMContentLoaded', () => setTheme(getTheme()))
 
 themeEls.forEach(el =>
   el.addEventListener('click', e => setTheme(e.target.dataset.theme))
