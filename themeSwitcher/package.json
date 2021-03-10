@@ -1,0 +1,9 @@
+{
+  "name": "theme-switcher",
+  "scripts": {
+    "start": "parcel ./src/index.html --open 'Google Chrome'"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

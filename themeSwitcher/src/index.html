@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switcher</title>
+    <link
+      rel="preload"
+      href="./logic.js"
+      as="script"
+      type="application/javascript"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="header-spacer"></div>
+        <button class="profile-button">
+          <img
+            src="../assets/fry.png"
+            alt="user-avatar"
+            class="avatar"
+            height="50"
+            width="50"
+          />
+        </button>
+        <div class="menu">
+          <div class="menu-heading"><span>Phillip J. Fry</span></div>
+          <hr />
+          <ul>
+            <li class="theme-li" data-theme="default">Theme: Default</li>
+            <li class="theme-li" data-theme="dark">Theme: Dark</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="product-wrapper">
+        <img
+          src="../assets/briefs.jpg"
+          alt="Lightning speed briefs ad thumbnail"
+          class="product-img"
+          width="420"
+          height="280"
+        />
+        <div class="product-info">
+          <h1>LightSpeed Briefs – Pre-owned</h1>
+          <span>$29.99 + tax</span>
+          <hr />
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <button id="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </main>
+    <script src="./logic.js"></script>
+  </body>
+</html>
