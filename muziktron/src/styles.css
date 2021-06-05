@@ -29,10 +29,11 @@ body {
   border: 1px solid #232323;
   border-radius: 50%;
   margin: 4px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  background-color: var(--color);
 }
 
 .note--btn {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -40,32 +41,37 @@ body {
   width: 75px;
   background-color: transparent;
   border: none;
+  border-radius: inherit;
+}
+
+.active {
+  box-shadow: 0 0 6px 4px var(--color);
 }
 
 .note--li:nth-child(7n + 1) {
-  background-color: rgba(255, 75, 100, 0.5);
+  --color: rgba(255, 75, 100, 0.5);
 }
 
 .note--li:nth-child(7n + 2) {
-  background-color: rgba(255, 150, 100, 0.5);
+  --color: rgba(255, 150, 100, 0.5);
 }
 
 .note--li:nth-child(7n + 3) {
-  background-color: rgba(255, 250, 100, 0.5);
+  --color: rgba(255, 250, 100, 0.5);
 }
 
 .note--li:nth-child(7n + 4) {
-  background-color: rgba(1, 200, 100, 0.5);
+  --color: rgba(1, 200, 100, 0.5);
 }
 
 .note--li:nth-child(7n + 5) {
-  background-color: rgba(1, 150, 255, 0.5);
+  --color: rgba(1, 150, 255, 0.5);
 }
 
 .note--li:nth-child(7n + 6) {
-  background-color: rgba(50, 100, 255, 0.5);
+  --color: rgba(50, 100, 255, 0.5);
 }
 
 .note--li:nth-child(7n + 7) {
-  background-color: rgba(200, 40, 255, 0.5);
+  --color: rgba(200, 40, 255, 0.5);
 }
