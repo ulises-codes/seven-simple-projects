@@ -37,7 +37,10 @@ function destroyOscillator() {
 
 function startNote(e) {
   if (oscillator && frequency) {
-    stopNote()
+    const activeButton = Array.from(notes).find(
+      note => midiToFreq(note.dataset.midiNote) === frequency
+    )
+    stopNote({ target: activeButton })
   }
 
   const { midiNote } = e.target.dataset
@@ -45,16 +48,19 @@ function startNote(e) {
   frequency = midiToFreq(midiNote)
 
   createOscillator(frequency)
+
+  e.target.classList.add('active')
 }
 
-function stopNote() {
+function stopNote(e) {
   destroyOscillator()
 
   frequency = undefined
+
+  e.target.classList.remove('active')
 }
 
 function handleKeyDown(e) {
-  e.preventDefault()
   const button = Array.from(notes).find(note => note.dataset.key === e.key)
 
   if (button) {
@@ -67,10 +73,9 @@ function handleKeyDown(e) {
 }
 
 function handleKeyUp(e) {
-  e.preventDefault()
   const button = Array.from(notes).find(note => note.dataset.key === e.key)
 
   if (button && frequency === midiToFreq(button.dataset.midiNote)) {
-    stopNote()
+    stopNote({ target: button })
   }
 }
