@@ -1,0 +1,26 @@
+{
+  "name": "muziktron",
+  "version": "1.0.0",
+  "description": "An 8-key vanilla JS synthesizer built with the Web Audio API.",
+  "main": "logic.js",
+  "scripts": {
+    "start": "parcel ./src/index.html --open 'Google Chrome'"
+  },
+  "keywords": [
+    "web",
+    "audio",
+    "api",
+    "vanilla",
+    "js",
+    "tutorial",
+    "ulises",
+    "himely",
+    "music",
+    "synthesizer"
+  ],
+  "author": "Ulises Himely",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
