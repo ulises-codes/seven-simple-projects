@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form action="" method="post">
+      <label for="avatar" class="avatar--label">
+        <img role="presentation" height="150" width="150" src="./person.svg" />
+        <input type="file" name="avatar" id="avatar" accept="image/*" />
+      </label>
+      <label for="first-name">
+        <input type="text" id="first-name" name="firstName" required />
+        <span>First Name</span>
+      </label>
+      <label for="middle-initial">
+        <input type="text" id="middle-initial" name="middleInitial" />
+        <span>Middle Initial</span>
+      </label>
+      <label for="last-name">
+        <input type="text" id="last-name" name="lastName" required />
+        <span>Last Name</span>
+      </label>
+      <label for="email">
+        <input type="email" name="email" id="email" required />
+        <span>Email Address</span>
+      </label>
+      <label for="date-of-birth">
+        <input type="date" name="dob" id="date-of-birth" required />
+        <span>Date of Birth</span>
+      </label>
+      <button type="submit" class="submit--btn">Submit</button>
+    </form>
+    <script src="./logic.js"></script>
+  </body>
+</html>

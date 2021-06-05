@@ -1,0 +1,25 @@
+{
+  "name": "signup-form",
+  "version": "1.0.0",
+  "description": "An HTML, CSS, and vanilla JS example of a simple user signup form. ",
+  "main": "src/logic.js",
+  "scripts": {
+    "start": "parcel ./src/index.html --open 'Google Chrome'"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "vanilla",
+    "js",
+    "javascript",
+    "ulises",
+    "himely",
+    "html",
+    "form"
+  ],
+  "author": "Ulises Himely",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
