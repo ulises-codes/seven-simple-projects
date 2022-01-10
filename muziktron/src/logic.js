@@ -7,9 +7,12 @@ let frequency
 let oscillator
 
 notes.forEach(note => {
-  note.addEventListener('mousedown', startNote)
+  note.addEventListener('touchstart', startNote)
+  note.addEventListener('touchend', stopNote)
 
+  note.addEventListener('mousedown', startNote)
   note.addEventListener('mouseup', stopNote)
+
   note.addEventListener('mouseout', stopNote)
 })
 
@@ -36,10 +39,15 @@ function destroyOscillator() {
 }
 
 function startNote(e) {
+  if (e.type === 'touchstart' || e.type === 'touchend') {
+    e.preventDefault()
+  }
+
   if (oscillator && frequency) {
     const activeButton = Array.from(notes).find(
       note => midiToFreq(note.dataset.midiNote) === frequency
     )
+
     stopNote({ target: activeButton })
   }
 
